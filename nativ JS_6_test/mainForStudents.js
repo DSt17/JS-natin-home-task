@@ -124,7 +124,6 @@ console.log(scoresSum)
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 const addFriends = (students) => {
     return students.map(el => {
-        // return {...el,friends: students.map(s => s.name !== el.name ? s.name : null)}
         return {
             ...el, friends: students.filter(s => s.name !== el.name).map(s => s.name)
         }
